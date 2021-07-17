@@ -17,11 +17,11 @@ class App extends Component {
           { title: "Home", path: "/" },
           { title: "About", path: "/" },
           { title: "Contact", path: "/" },
-          { title: "Skills", path: "/"}
+          { title: "Skills", path: "/" }
         ],
 
         home: {
-          mainHeader: "Nothing == Impossible",
+          mainHeader: "Nothing==Impossible",
           subHeader: "Solving Problems through Programming",
           subText: "Check it out below!",
         },
@@ -72,13 +72,13 @@ class App extends Component {
             path="/"
             exact
             render={() => (
-              
-                <HomePage
-                  mainHeader={this.state.home.mainHeader}
-                  subHeader={this.state.home.subHeader}
-                  subText={this.state.home.subText}
-                />
-                )}
+
+              <HomePage
+                mainHeader={this.state.home.mainHeader}
+                subHeader={this.state.home.subHeader}
+                subText={this.state.home.subText}
+              />
+            )}
           />
           <Route
             path="/about"
@@ -89,9 +89,9 @@ class App extends Component {
           <Route
             path="/contact"
             render={() => (
-              <ContactPage 
-              mainHeader={this.state.contact.mainHeader}
-              last = {this.state.contact.last}
+              <ContactPage
+                mainHeader={this.state.contact.mainHeader}
+                last={this.state.contact.last}
               />
             )}
           />
@@ -102,7 +102,7 @@ class App extends Component {
             )}
           />
 
-          
+
         </Container>
       </Router>
     );
