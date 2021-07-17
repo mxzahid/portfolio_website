@@ -21,7 +21,7 @@ class App extends Component {
         ],
 
         home: {
-          mainHeader: "Nothing==Impossible",
+          mainHeader: "Nothing == Impossible",
           subHeader: "Solving Problems through Programming",
           subText: "Check it out below!",
         },

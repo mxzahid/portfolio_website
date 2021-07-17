@@ -11,11 +11,11 @@ function Header(props) {
         <Row className="justify-content-center py-5">
           <Col md={8} sm={12}>
             {props.mainHeader && (
-              props.last == "True" ? 
-              <div 
-                className= "connectHeader">
-                {props.mainHeader}
-              </div> :
+              props.last == "True" ?
+                <div
+                  className="connectHeader">
+                  {props.mainHeader}
+                </div> :
                 <h1
                   className="display-2 font-weight-bolder"
                   style={{ color: "#FFFFFF" }}

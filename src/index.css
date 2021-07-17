@@ -271,3 +271,22 @@ button.send.finished {
   background-color: rgb(156, 0, 0);
   border-width: 1px 1px 0 1px;
 }
+
+
+/* for different media */
+
+/* For mobile phones: */
+@media screen and (max-width: 768px) {
+  h1{
+      font-size:14px;
+  }
+}
+
+h1{
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+}
