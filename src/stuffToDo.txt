@@ -1,0 +1,28 @@
+
+#SHIT TO ADD IN SITE:
+
+add code to github
+
+My Work Page:
+    Add small details of top projects along with specific github link.
+
+About me page:
+    //0) Edit about me layout -- how to display the info
+    //1) edit text
+    //2) make image responive -- add it to the container- how?
+    //3) edit hobbies tab
+    //4) finalize all text
+
+Skill page:
+    // 0) make everything not fucked in different views.
+    //1) figure out what kind of viz for prog lang and mL (structure of drill down viz)
+    //2) webDev slide - header, viz structure
+    //3) devOps slide - header, viz structure
+    //4) softSkills slide - header, viz structure
+    //5) code 1-4
+    //6) fix values for softskills
+    //7) color for pLang slide
+
+Contact page:
+    
+    //0) title color...
