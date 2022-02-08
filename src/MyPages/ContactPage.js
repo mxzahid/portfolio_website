@@ -3,8 +3,8 @@ import Header from "../Components/Header";
 import About from "../Components/AboutMe/About";
 import form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import emailjs from "emailjs-com";
 import Footer from "../Components/Footer"
+import axios from 'axios'
 class ContactPage extends React.Component {
   constructor(props) {
     super();
@@ -14,6 +14,7 @@ class ContactPage extends React.Component {
       message: "",
       disable: false,
       emailSent: null,
+      api: "https://5ktw2ettwh.execute-api.us-east-1.amazonaws.com/production?"
     };
   }
 
@@ -29,30 +30,31 @@ class ContactPage extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm(
-        "gmail",
-        "template_59i9pbh",
-        e.target,
-        "user_vpNFwhgpCtL4HiHuYoPXe"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          this.setState({
-            disabled: true,
-            emailSent: true,
-          });
-        },
-        (error) => {
-          console.log(error.text);
-          this.setState({
-            disabled: false,
-            emailSent: false,
-          });
-        }
-      );
+    this.apiBuilder(e);
+    axios.get(this.state.api)
+    .then(
+      (result) => {
+        console.log(result.text);
+        this.setState({
+          disabled: true,
+          emailSent: true,
+        });
+      },
+      (error) => {
+        console.log(error.text);
+        this.setState({
+          disabled: false,
+          emailSent: false,
+        });
+      }
+    );
   };
+
+  apiBuilder = (e) => {
+     this.state.api = this.state.api + 'name=' + e.target.name.value + "&" + 'email=' + e.target.email.value + "&" + 'message=' + e.target.message.value;
+  };
+
+
 
   render(props) {
     return (
